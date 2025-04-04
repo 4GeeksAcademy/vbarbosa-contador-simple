@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Icon } from './components/Icon';
 
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,6 +9,7 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
+import { Icon } from './components/Icon';
 
 let digits = [0, 0, 0, 0, 0, 0];
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,21 +28,21 @@ setInterval(() => {
     }
 
 
-    // Render the component
+    // Render the loop while maping array to create the digits
     
     root.render(
 
-      <div className="row">
-        <div className="col d-flex bg-dark w-50 mx-auto justify-content-center">
-        
-        </div>,
-        <div className="col d-flex bg-dark w-50 mx-auto justify-content-center">
-        {[...digits].reverse().map((digit, index) => (
-            <div key={index} className='card fs-1 m-2 p-2 bg-secondary text-white'>
-                {digit}
+      <div className="row d-flex m-5">
+        <div className="col-12 col-lg-12">
+          <div className='d-flex bgCounter justify-content-center mx-auto'>
+          <Icon />
+          {[...digits].reverse().map((digit, index) => (
+            <div key={index} className="card bgDigits m-2 p-3">
+              {digit}
             </div>
-        ))}
+          ))}
+          </div>
         </div>
       </div>
     );
-}, 200);
+}, 1000);

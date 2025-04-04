@@ -1,13 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
 
-export function Icon () {
+// Import fontawsome to react
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
-	const element = <FontAwesomeIcon icon={faEnvelope} />
-
-	  return (
-	<div className="d-flex justify-content-center">
-	  {element}
-	</div>
-  );
+export const Icon = () => {
+	return(
+		// React example
+		<div className="card bgDigits justify-content-center m-2 p-3">
+			<FontAwesomeIcon icon={faClock} flip="horizontal" />
+		</div>
+		
+	);
 };
+

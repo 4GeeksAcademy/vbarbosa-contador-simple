@@ -9,3 +9,17 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.bgCounter{
+    background-color: rgba(0, 0, 0, 0.856);
+    width: 700px;
+}
+
+.bgDigits {
+    background-color: rgba(71, 66, 66, 0.372);
+    font-size: 55px;
+    color: white;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+};
